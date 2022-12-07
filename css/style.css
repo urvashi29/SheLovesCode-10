@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  background-color: aquamarine;
+
+  /* row-reverse, column */
+  flex-direction: row;
+
+  /* flex-start, flex-end, center, space-beteween, space-around  */
+  justify-content: space-between;
+
+  /* flex-start, flex-end, center */
+  align-items: flex-start;
+
+  /* align-content: space-evenly; */
+}
+
+.flex-container > div {
+  border: 1px solid black;
+  width: 24%;
+  background-color: yellow;
+}
+
+@media screen and (max-width: 400px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-container > div {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 992px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
+  .flex-container > div {
+    width: 50%;
+  }
+}
